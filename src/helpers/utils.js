@@ -106,7 +106,9 @@ exports.notificationMail = async (userData) => {
 
 exports.channelNotificationEmail = async (userData) => {
   let name = userData?.Username;
-  let msg = `you are assigned in HT channel by MasterAdmin`;
+  let msg = `You have been assign in Crypto channel by the Crypto Admin.
+  To access your channel, log into your Crypto account,click on the
+  Crypto icon at the top of the page,then click on My Channel.`;
   let redirectUrl = `${environment.FRONTEND_URL}`;
 
   const mailObj = {
@@ -131,9 +133,9 @@ exports.communityApproveEmail = async (profileId, isApprove) => {
       userData[0]?.FirstName + " " + userData[0]?.LastName;
     let msg = "";
     if (isApprove === "Y") {
-      msg = `Your Consultant has been approved by Master Admin.`;
+      msg = `Crypto has approved your Consultant account.`;
     } else {
-      msg = `Your Consultant has been unapproved by Master Admin.`;
+      msg = `Crypto has unapproved your Consultant account.`;
     }
     let redirectUrl = `${environment.FRONTEND_URL}`;
     const mailObj = {
