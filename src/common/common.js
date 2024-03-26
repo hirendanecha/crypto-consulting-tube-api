@@ -10,7 +10,6 @@ module.exports = function () {
         active: user.IsActive,
       },
     };
-``
     return jwt.sign(payload, env.JWT_SECRET_KEY, { expiresIn: "15d" });
   };
 };
