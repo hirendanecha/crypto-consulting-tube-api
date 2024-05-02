@@ -410,9 +410,9 @@ Community.addAreas = async function (communityId, data) {
 };
 
 Community.getEmphasisAndArea = async function () {
-  const query = "select * from emphasis_healing";
+  const query = "select * from emphasis_healing order by eId asc";
   const emphasis = await executeQuery(query);
-  const query1 = "select * from area_healing";
+  const query1 = "select * from area_healing order by aId asc";
   const area = await executeQuery(query1);
   return { emphasis, area };
 };
